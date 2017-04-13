@@ -1,0 +1,404 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* openacademy
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-04-08 06:28+0000\n"
+"PO-Revision-Date: 2017-04-08 06:39+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: zh_CN\n"
+"X-Generator: Poedit 2.0\n"
+
+#. module: openacademy
+#: model:ir.ui.view,arch_db:openacademy.view_openacad_session_kanban
+msgid ""
+"<br/>\n"
+"                                    Start date:"
+msgstr ""
+"<br/>\n"
+"                                    Start date:"
+
+#. module: openacademy
+#: model:ir.ui.view,arch_db:openacademy.view_openacad_session_kanban
+msgid ""
+"<br/>\n"
+"                                    duration:"
+msgstr ""
+"<br/>\n"
+"                                    duration:"
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_openacademy_session_active
+msgid "Active"
+msgstr "有效"
+
+#. module: openacademy
+#: model:ir.actions.act_window,name:openacademy.launch_session_wizard
+#: model:ir.ui.view,arch_db:openacademy.wizard_form_view
+msgid "Add Attendees"
+msgstr "增加学员"
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_res_partner_session_ids
+msgid "Attended Sessions"
+msgstr "已参加的学期"
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_openacademy_session_attendee_ids
+#: model:ir.model.fields,field_description:openacademy.field_openacademy_wizard_attendee_ids
+msgid "Attendees"
+msgstr "学员"
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_openacademy_session_attendees_count
+msgid "Attendees count"
+msgstr "学员数量"
+
+#. module: openacademy
+#: model:ir.ui.view,arch_db:openacademy.wizard_form_view
+msgid "Cancel"
+msgstr "取消"
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_openacademy_session_color
+msgid "Color"
+msgstr "颜色"
+
+#. module: openacademy
+#: model:ir.ui.menu,name:openacademy.configuration_menu
+msgid "Configuration"
+msgstr "配置"
+
+#. module: openacademy
+#: model:ir.ui.view,arch_db:openacademy.session_form_view
+msgid "Confirm"
+msgstr "确认"
+
+#. module: openacademy
+#: selection:openacademy.session,state:0
+msgid "Confirmed"
+msgstr "已确认"
+
+#. module: openacademy
+#: model:ir.actions.act_window,name:openacademy.contact_cat_list_action
+#: model:ir.ui.menu,name:openacademy.contact_cat_menu
+msgid "Contact Tags"
+msgstr "联系人标签"
+
+#. module: openacademy
+#: model:ir.actions.act_window,name:openacademy.contact_list_action
+#: model:ir.ui.menu,name:openacademy.contact_menu
+msgid "Contacts"
+msgstr "联系人"
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_openacademy_session_course_id
+msgid "Course"
+msgstr "课程"
+
+#. module: openacademy
+#: model:ir.ui.view,arch_db:openacademy.course_form_view
+msgid "Course Form"
+msgstr "课程表单"
+
+#. module: openacademy
+#: model:ir.ui.view,arch_db:openacademy.course_tree_view
+msgid "Course Tree"
+msgstr "课程列表"
+
+#. module: openacademy
+#: model:ir.actions.act_window,name:openacademy.course_list_action
+#: model:ir.ui.menu,name:openacademy.courses_menu
+msgid "Courses"
+msgstr "课程"
+
+#. module: openacademy
+#: model:ir.actions.act_window,help:openacademy.course_list_action
+msgid "Create the first course"
+msgstr "创建第一个课程"
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_openacademy_course_create_uid
+#: model:ir.model.fields,field_description:openacademy.field_openacademy_session_create_uid
+#: model:ir.model.fields,field_description:openacademy.field_openacademy_wizard_create_uid
+msgid "Created by"
+msgstr "创建者"
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_openacademy_course_create_date
+#: model:ir.model.fields,field_description:openacademy.field_openacademy_session_create_date
+#: model:ir.model.fields,field_description:openacademy.field_openacademy_wizard_create_date
+msgid "Created on"
+msgstr "创建于"
+
+#. module: openacademy
+#: model:ir.ui.view,arch_db:openacademy.view_openacad_session_kanban
+msgid "Delete"
+msgstr "删除"
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_openacademy_course_description
+#: model:ir.ui.view,arch_db:openacademy.course_form_view
+msgid "Description"
+msgstr "说明"
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_openacademy_course_display_name
+#: model:ir.model.fields,field_description:openacademy.field_openacademy_session_display_name
+#: model:ir.model.fields,field_description:openacademy.field_openacademy_wizard_display_name
+msgid "Display Name"
+msgstr "显示名称"
+
+#. module: openacademy
+#: selection:openacademy.session,state:0
+msgid "Done"
+msgstr "完成"
+
+#. module: openacademy
+#: selection:openacademy.session,state:0
+msgid "Draft"
+msgstr "草稿"
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_openacademy_session_duration
+msgid "Duration"
+msgstr "持续时间"
+
+#. module: openacademy
+#: model:ir.model.fields,help:openacademy.field_openacademy_session_duration
+msgid "Duration in days"
+msgstr "Duration in days"
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_openacademy_session_hours
+msgid "Duration in hours"
+msgstr "Duration in hours"
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_openacademy_session_end_date
+msgid "End Date"
+msgstr "结束日期"
+
+#. module: openacademy
+#: model:ir.ui.view,arch_db:openacademy.session_form_view
+msgid "General"
+msgstr "一般"
+
+#. module: openacademy
+#: model:ir.ui.view,arch_db:openacademy.course_search_view
+msgid "Group By"
+msgstr "分组"
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_openacademy_course_id
+#: model:ir.model.fields,field_description:openacademy.field_openacademy_session_id
+#: model:ir.model.fields,field_description:openacademy.field_openacademy_wizard_id
+msgid "ID"
+msgstr "ID"
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_openacademy_session_instructor_id
+#: model:ir.model.fields,field_description:openacademy.field_res_partner_instructor
+msgid "Instructor"
+msgstr "讲师"
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_openacademy_course___last_update
+#: model:ir.model.fields,field_description:openacademy.field_openacademy_session___last_update
+#: model:ir.model.fields,field_description:openacademy.field_openacademy_wizard___last_update
+msgid "Last Modified on"
+msgstr "最后修改日"
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_openacademy_course_write_uid
+#: model:ir.model.fields,field_description:openacademy.field_openacademy_session_write_uid
+#: model:ir.model.fields,field_description:openacademy.field_openacademy_wizard_write_uid
+msgid "Last Updated by"
+msgstr "最后更新人"
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_openacademy_course_write_date
+#: model:ir.model.fields,field_description:openacademy.field_openacademy_session_write_date
+#: model:ir.model.fields,field_description:openacademy.field_openacademy_wizard_write_date
+msgid "Last Updated on"
+msgstr "最近更新时间"
+
+#. module: openacademy
+#: model:ir.ui.view,arch_db:openacademy.session_form_view
+msgid "Mark as done"
+msgstr "标为已完成"
+
+#. module: openacademy
+#: model:ir.ui.view,arch_db:openacademy.course_search_view
+msgid "My Courses"
+msgstr "我的课程"
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_openacademy_session_name
+msgid "Name"
+msgstr "名称"
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_openacademy_session_seats
+msgid "Number of seats"
+msgstr "Number of seats"
+
+#. module: openacademy
+#: model:ir.ui.menu,name:openacademy.main_openacademy_menu
+#: model:ir.ui.menu,name:openacademy.openacademy_menu
+msgid "Open Academy"
+msgstr "开放学院"
+
+#. module: openacademy
+#: model:res.groups,name:openacademy.group_manager
+msgid "OpenAcademy / Manager"
+msgstr "开放学院 / 管理员"
+
+#. module: openacademy
+#: model:ir.ui.view,arch_db:openacademy.openacademy_session_graph_view
+msgid "Participations by Courses"
+msgstr "参与课程"
+
+#. module: openacademy
+#: model:ir.model,name:openacademy.model_res_partner
+msgid "Partner"
+msgstr "业务伙伴"
+
+#. module: openacademy
+#: model:ir.ui.view,arch_db:openacademy.course_form_view
+msgid "Registered sessions"
+msgstr "课程注册"
+
+#. module: openacademy
+#: model:ir.ui.view,arch_db:openacademy.session_form_view
+msgid "Reset to draft"
+msgstr "重置为草稿"
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_openacademy_course_responsible_id
+#: model:ir.ui.view,arch_db:openacademy.course_search_view
+msgid "Responsible"
+msgstr "负责人"
+
+#. module: openacademy
+#: model:ir.ui.view,arch_db:openacademy.session_form_view
+msgid "Schedule"
+msgstr "时间表"
+
+#. module: openacademy
+#: model:ir.ui.view,arch_db:openacademy.session_calendar_view
+msgid "Session Calendar"
+msgstr "授课日历"
+
+#. module: openacademy
+#: model:ir.ui.view,arch_db:openacademy.session_form_view
+msgid "Session Form"
+msgstr "授课表单"
+
+#. module: openacademy
+#: model:ir.ui.view,arch_db:openacademy.session_gantt_view
+msgid "Session Gantt"
+msgstr "授课甘特图"
+
+#. module: openacademy
+#: model:ir.ui.view,arch_db:openacademy.session_tree_view
+msgid "Session Tree"
+msgstr "授课列表"
+
+#. module: openacademy
+#: model:ir.ui.view,arch_db:openacademy.view_openacad_session_kanban
+msgid "Session name:"
+msgstr "授课名称:"
+
+#. module: openacademy
+#: model:ir.actions.act_window,name:openacademy.session_list_action
+#: model:ir.model.fields,field_description:openacademy.field_openacademy_course_session_ids
+#: model:ir.model.fields,field_description:openacademy.field_openacademy_wizard_session_ids
+#: model:ir.ui.menu,name:openacademy.session_menu
+#: model:ir.ui.view,arch_db:openacademy.course_form_view
+#: model:ir.ui.view,arch_db:openacademy.partner_instructor_form_view
+msgid "Sessions"
+msgstr "授课"
+
+#. module: openacademy
+#: model:ir.actions.server,name:openacademy.set_session_to_confirmed
+msgid "Set session to Confirmed"
+msgstr "设置为确认"
+
+#. module: openacademy
+#: model:ir.actions.server,name:openacademy.set_session_to_done
+msgid "Set session to Done"
+msgstr "设置为完成"
+
+#. module: openacademy
+#: model:ir.actions.server,name:openacademy.set_session_to_draft
+msgid "Set session to Draft"
+msgstr "设置为草稿"
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_openacademy_session_start_date
+msgid "Start date"
+msgstr "开始日期"
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_openacademy_session_state
+msgid "State"
+msgstr "省/ 州"
+
+#. module: openacademy
+#: model:ir.ui.view,arch_db:openacademy.wizard_form_view
+msgid "Subscribe"
+msgstr "订阅"
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_openacademy_session_taken_seats
+msgid "Taken seats"
+msgstr "Taken seats"
+
+#. module: openacademy
+#: model:res.partner.category,name:openacademy.teacher1
+msgid "Teacher / Level 1"
+msgstr "Teacher / Level 1"
+
+#. module: openacademy
+#: model:res.partner.category,name:openacademy.teacher2
+msgid "Teacher / Level 2"
+msgstr "Teacher / Level 2"
+
+#. module: openacademy
+#: sql_constraint:openacademy.course:0
+msgid "The course title must be unique"
+msgstr "课程标题必须唯一"
+
+#. module: openacademy
+#: sql_constraint:openacademy.course:0
+msgid "The title of the course should not be the description"
+msgstr "课程标题与描述不能相同"
+
+#. module: openacademy
+#: model:ir.model.fields,field_description:openacademy.field_openacademy_course_name
+msgid "Title"
+msgstr "标题"
+
+#. module: openacademy
+#: model:ir.model,name:openacademy.model_openacademy_course
+msgid "openacademy.course"
+msgstr "openacademy.course"
+
+#. module: openacademy
+#: model:ir.model,name:openacademy.model_openacademy_session
+msgid "openacademy.session"
+msgstr "openacademy.session"
+
+#. module: openacademy
+#: model:ir.model,name:openacademy.model_openacademy_wizard
+msgid "openacademy.wizard"
+msgstr "openacademy.wizard"

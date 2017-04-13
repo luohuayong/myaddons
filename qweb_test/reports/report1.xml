@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+<data>
+    <report
+        id="report1"
+        model="openacademy.session"
+        string="QWeb Test 1"
+        name="qweb_test.report_test_1"
+        file="qweb_test_1"
+        report_type="qweb-pdf" />
+
+    <template id="report_test_1_sub1">
+        <div>
+            这个模板被调用的内容是：
+            <t t-raw="0"/>
+        </div>
+    </template>
+
+    <template id="report_test_1">
+        <t t-call="report.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="report.external_layout">
+                    <div class="page">
+                        <t t-set="condition" t-value="True"/>
+                        <t t-if="condition"><p>condition=True</p></t>
+                        <t t-log="condition"/>
+                        <t t-set="condition1">False</t>
+                        <p>condition1=<t t-esc="condition1"/></p>
+                        <p>Test</p>
+                        Welcome <t t-esc="user.login"/>!
+                        <p t-foreach="[1,2,3]" t-as="i">
+                            <t t-esc="i"/> <t t-if="i_first">first</t> <t t-if="i_last">last</t></p>
+                        <t t-foreach="[1,2,3]" t-as="item">
+                           <li t-attf-class="row {{item_parity}}">line</li>
+                        </t>
+                        <t t-call="qweb_test.report_test_1_sub1">
+                            <em>内容</em>
+                        </t>
+                        <!--<t t-call="report_test_1_sub1">-->
+                        <!--</t>-->
+
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+</data>
+</odoo>
