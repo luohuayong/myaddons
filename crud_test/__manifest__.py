@@ -1,10 +1,9 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "开放学院",
+    'name': "CRUD学习",
 
     'summary': """
-        开放学院培训管理模型：
-        课程、授课、听课人注册""",
+        增、删、改、查练习""",
 
     'description': """
         Long description of module's purpose
@@ -20,19 +19,13 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    'depends': ['base', 'openacademy'],
 
     # always loaded
     'data': [
-        'security/security.xml',
-        'security/ir.model.access.csv',
-        'views/openacademy.xml',
+        # 'security/ir.model.access.csv',
+        'views/views.xml',
         'views/templates.xml',
-        'demo/demo.xml',
-        'views/partner.xml',
-        'views/session_workflow.xml',
-        'views/scheduler_demo.xml',
-        'reports.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

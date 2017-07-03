@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_scheduler_form">
+            <field name="name">scheduler.demo.form</field>
+            <field name="model">scheduler.demo</field>
+            <field name="arch" type="xml">
+                <form string="Schedule Form">
+                    <group>
+                        <field name="name"/>
+                        <field name="numberOfUpdates"/>
+                        <field name="lastModified"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_scheduler_tree">
+            <field name="name">scheduler.demo.tree</field>
+            <field name="model">scheduler.demo</field>
+            <field name="arch" type="xml">
+                <tree string="Schedule Tree">
+                    <field name="name"/>
+                    <field name="numberOfUpdates"/>
+                    <field name="lastModified"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="ir_cron_scheduler_demo_action" model="ir.cron">
+            <field name="name">Demo scheduler</field>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="interval_number">2</field>
+            <field name="interval_type">minutes</field>
+            <field name="numbercall">-1</field>
+            <field eval="False" name="doall"/>
+            <field eval="'scheduler.demo'" name="model"/>
+            <field eval="'process_demo_scheduler_queue'" name="function"/>
+        </record>
+
+        <record model="ir.actions.act_window" id="scheduler_demo_list_action">
+            <field name="name">计划任务Demo</field>
+            <field name="res_model">scheduler.demo</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="scheduler_demo_menu" name="计划任务Demo"
+          parent="main_openacademy_menu"/>
+
+        <menuitem id="scheduler_demo_list_menu" name="计划任务Demo"
+          parent="scheduler_demo_menu"
+          action="scheduler_demo_list_action"/>
+    </data>
+</odoo>
