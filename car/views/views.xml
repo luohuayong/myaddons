@@ -1,0 +1,229 @@
+<openerp>
+    <data>
+        <!-- tree视图 品牌-->
+        <record id="view_tree_car_brand" model="ir.ui.view">
+            <field name="name">品牌</field>
+            <field name="model">car.brand</field>
+            <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="name_e"/>
+                <field name="first"/>
+                <field name="code_guazi"/>
+            </tree>
+            </field>
+        </record>
+
+        <!-- form视图 品牌-->
+        <record id="view_form_car_brand" model="ir.ui.view">
+            <field name="name">品牌</field>
+            <field name="model">car.brand</field>
+            <field name="arch" type="xml">
+                <form>
+                      <sheet>
+                            <group name="group_top" string="品牌">
+                                <field name="name"/>
+                                <field name="name_e"/>
+                                <field name="first"/>
+                                <field name="code_guazi"/>
+                            </group>
+                      </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- tree视图 车系-->
+        <record id="view_tree_car_car" model="ir.ui.view">
+            <field name="name">车系</field>
+            <field name="model">car.car</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="brand_id"/>
+                    <field name="code_guazi"/>
+                    <field name="type"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- form视图 车系-->
+        <record id="view_form_car_car" model="ir.ui.view">
+            <field name="name">车系</field>
+            <field name="model">car.car</field>
+            <field name="arch" type="xml">
+                <form>
+                      <sheet>
+                            <group name="group_top" string="车系">
+                                <field name="name"/>
+                                <field name="brand_id"/>
+                                <field name="code_guazi"/>
+                                <field name="type"/>
+                            </group>
+                      </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- tree视图 型号-->
+        <record id="view_tree_car_model" model="ir.ui.view">
+            <field name="name">型号</field>
+            <field name="model">car.model</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="car_id"/>
+                    <field name="price_new"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- form视图 型号-->
+        <record id="view_form_car_model" model="ir.ui.view">
+            <field name="name">型号</field>
+            <field name="model">car.model</field>
+            <field name="arch" type="xml">
+                <form>
+                      <sheet>
+                            <group name="group_top" string="型号">
+                                <field name="name"/>
+                                <field name="car_id"/>
+                                <field name="price_new"/>
+                            </group>
+                      </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- tree视图 销售-->
+        <record id="view_tree_car_sale" model="ir.ui.view">
+            <field name="name">销售</field>
+            <field name="model">car.sale</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="title"/>
+                    <field name="url"/>
+                    <field name="shangpai_date"/>
+                    <field name="address"/>
+                    <field name="xingshi"/>
+                    <field name="price"/>
+                    <field name="price_new"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- form视图 销售-->
+        <record id="view_form_car_sale" model="ir.ui.view">
+            <field name="name">销售</field>
+            <field name="model">car.sale</field>
+            <field name="arch" type="xml">
+                <form>
+                      <sheet>
+                            <group name="group_top" string="销售">
+                                <field name="title"/>
+                                <field name="url"/>
+                                <field name="shangpai_date"/>
+                                <field name="address"/>
+                                <field name="xingshi"/>
+                                <field name="price"/>
+                                <field name="price_new"/>
+                            </group>
+                      </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- 视图动作 品牌 -->
+        <record model="ir.actions.act_window" id="act_window_car_brand">
+          <field name="name">品牌</field>
+          <field name="res_model">car.brand</field>
+          <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- 视图动作 车系 -->
+        <record model="ir.actions.act_window" id="act_window_car_car">
+          <field name="name">车系</field>
+          <field name="res_model">car.car</field>
+          <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- 视图动作 型号 -->
+        <record model="ir.actions.act_window" id="act_window_car_model">
+          <field name="name">型号</field>
+          <field name="res_model">car.model</field>
+          <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- 视图动作 销售 -->
+        <record model="ir.actions.act_window" id="act_window_car_sale">
+          <field name="name">销售</field>
+          <field name="res_model">car.sale</field>
+          <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- 顶级菜单 汽车-->
+        <menuitem name="汽车" id="menu_main_car" sequence="10"/>
+
+        <!-- 一级菜单 汽车-->
+        <menuitem name="汽车" id="menu_car" parent="menu_main_car"
+                  sequence="10"/>
+
+        <!-- 二级菜单 品牌 -->
+        <menuitem name="品牌" id="menu_car_brand" parent="menu_car"
+                  action="act_window_car_brand" sequence="10"/>
+
+        <!-- 二级菜单 车系 -->
+        <menuitem name="车系" id="menu_car_car" parent="menu_car"
+                  action="act_window_car_car" sequence="20"/>
+
+        <!-- 二级菜单 型号 -->
+        <menuitem name="型号" id="menu_car_model" parent="menu_car"
+                  action="act_window_car_model" sequence="30"/>
+
+        <!-- 二级菜单 销售 -->
+        <menuitem name="销售" id="menu_car_sale" parent="menu_car"
+                  action="act_window_car_sale" sequence="40"/>
+
+
+
+    <!-- actions opening views on models -->
+    <!--
+    <record model="ir.actions.act_window" id="car.action_window">
+      <field name="name">car window</field>
+      <field name="res_model">car.car</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    -->
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="car.action_server">
+      <field name="name">car server</field>
+      <field name="model_id" ref="model_car_car"/>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+    -->
+
+    <!-- Top menu item -->
+    <!--
+    <menuitem name="car" id="car.menu_root"/>
+    -->
+    <!-- menu categories -->
+    <!--
+    <menuitem name="Menu 1" id="car.menu_1" parent="car.menu_root"/>
+    <menuitem name="Menu 2" id="car.menu_2" parent="car.menu_root"/>
+    -->
+    <!-- actions -->
+    <!--
+    <menuitem name="List" id="car.menu_1_list" parent="car.menu_1"
+              action="car.action_window"/>
+    <menuitem name="Server to list" id="car" parent="car.menu_2"
+              action="car.action_server"/>
+    -->
+  </data>
+</openerp>
