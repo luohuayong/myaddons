@@ -100,7 +100,11 @@
             <field name="model">car.sale</field>
             <field name="arch" type="xml">
                 <tree>
-                    <field name="title"/>
+                    <field name="brand_name"/>
+                    <field name="brand_first"/>
+                    <field name="car_name"/>
+                    <field name="car_type"/>
+                    <field name="model_name"/>
                     <field name="url"/>
                     <field name="shangpai_date"/>
                     <field name="address"/>
@@ -119,7 +123,11 @@
                 <form>
                       <sheet>
                             <group name="group_top" string="销售">
-                                <field name="title"/>
+                                <field name="brand_name"/>
+                                <field name="brand_first"/>
+                                <field name="car_name"/>
+                                <field name="car_type"/>
+                                <field name="model_name"/>
                                 <field name="url"/>
                                 <field name="shangpai_date"/>
                                 <field name="address"/>
@@ -128,6 +136,131 @@
                                 <field name="price_new"/>
                             </group>
                       </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- tree视图 区域-->
+        <record id="view_tree_car_area" model="ir.ui.view">
+            <field name="name">区域</field>
+            <field name="model">car.area</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="province_id"/>
+                    <field name="province_name"/>
+                    <field name="city_id"/>
+                    <field name="city_name"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- form视图 区域-->
+        <record id="view_form_car_area" model="ir.ui.view">
+            <field name="name">区域</field>
+            <field name="model">car.area</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group name="group_top" string="区域">
+                            <field name="province_id"/>
+                            <field name="province_name"/>
+                            <field name="city_id"/>
+                            <field name="city_name"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- tree视图 临时1-->
+        <record id="view_tree_car_temp1" model="ir.ui.view">
+            <field name="name">临时1</field>
+            <field name="model">car.temp1</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="brand_id"/>
+                    <field name="brand_name"/>
+                    <field name="brand_first"/>
+                    <field name="car_id"/>
+                    <field name="car_name"/>
+                    <field name="car_type"/>
+                    <field name="model_id"/>
+                    <field name="model_name"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- form视图 临时1-->
+        <record id="view_form_car_temp1" model="ir.ui.view">
+            <field name="name">临时1</field>
+            <field name="model">car.temp1</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group name="group_top" string="临时1">
+                            <field name="brand_id"/>
+                            <field name="brand_name"/>
+                            <field name="brand_first"/>
+                            <field name="car_id"/>
+                            <field name="car_name"/>
+                            <field name="car_type"/>
+                            <field name="model_id"/>
+                            <field name="model_name"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- tree视图 tf数据-->
+        <record id="view_tree_car_tf" model="ir.ui.view">
+            <field name="name">tf数据</field>
+            <field name="model">car.tf</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="model_id"/>
+                    <field name="city_id"/>
+                    <field name="used_months"/>
+                    <field name="xingshi"/>
+                    <field name="price_new"/>
+                    <field name="price"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- form视图 tf数据-->
+        <record id="view_form_car_tf" model="ir.ui.view">
+            <field name="name">tf数据</field>
+            <field name="model">car.tf</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group name="group_top" string="tf数据">
+                            <field name="model_id"/>
+                            <field name="city_id"/>
+                            <field name="used_months"/>
+                            <field name="xingshi"/>
+                            <field name="price_new"/>
+                            <field name="price"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_wizard_car_wizard" model="ir.ui.view">
+            <field name="name">向导</field>
+            <field name="model">car.wizard</field>
+            <field name="arch" type="xml">
+                <form string="向导">
+                    <p>
+                        - 抓取瓜子网数据 <br/>
+                    </p>
+                    <footer>
+                        <button name="catch_guazi" string="抓取瓜子网" type="object"  class="oe_highlight"  />
+                        或者
+                        <button string="Cancel" class="oe_link" special="cancel" />
+                    </footer>
                 </form>
             </field>
         </record>
@@ -160,6 +293,37 @@
           <field name="view_mode">tree,form</field>
         </record>
 
+        <!-- 视图动作 区域 -->
+        <record model="ir.actions.act_window" id="act_window_car_area">
+            <field name="name">区域</field>
+            <field name="res_model">car.area</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- 视图动作 临时1 -->
+        <record model="ir.actions.act_window" id="act_window_car_temp1">
+            <field name="name">临时1</field>
+            <field name="res_model">car.temp1</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- 视图动作 tf数据 -->
+        <record model="ir.actions.act_window" id="act_window_car_tf">
+            <field name="name">tf数据</field>
+            <field name="res_model">car.tf</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- 视图动作 向导 -->
+        <record model="ir.actions.act_window" id="act_window_car_wizard">
+            <field name="name">向导</field>
+            <field name="res_model">car.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            <field name="key2">client_action_multi</field>
+            <field name="view_id" ref="view_wizard_car_wizard"/>
+        </record>
+
         <!-- 顶级菜单 汽车-->
         <menuitem name="汽车" id="menu_main_car" sequence="10"/>
 
@@ -183,47 +347,23 @@
         <menuitem name="销售" id="menu_car_sale" parent="menu_car"
                   action="act_window_car_sale" sequence="40"/>
 
+        <!-- 二级菜单 区域 -->
+        <menuitem name="区域" id="menu_car_area" parent="menu_car"
+                  action="act_window_car_area" sequence="50"/>
+
+        <!-- 二级菜单 临时1 -->
+        <menuitem name="临时1" id="menu_car_temp1" parent="menu_car"
+                  action="act_window_car_temp1" sequence="60"/>
+
+        <!-- 二级菜单 tf数据 -->
+        <menuitem name="tf数据" id="menu_car_tf" parent="menu_car"
+                  action="act_window_car_tf" sequence="70"/>
 
 
-    <!-- actions opening views on models -->
-    <!--
-    <record model="ir.actions.act_window" id="car.action_window">
-      <field name="name">car window</field>
-      <field name="res_model">car.car</field>
-      <field name="view_mode">tree,form</field>
-    </record>
-    -->
+        <!-- 二级菜单 向导 -->
+        <menuitem name="向导" id="menu_car_wizard" parent="menu_car"
+                  action="act_window_car_wizard" sequence="100"/>
 
-    <!-- server action to the one above -->
-    <!--
-    <record model="ir.actions.server" id="car.action_server">
-      <field name="name">car server</field>
-      <field name="model_id" ref="model_car_car"/>
-      <field name="code">
-        action = {
-          "type": "ir.actions.act_window",
-          "view_mode": "tree,form",
-          "res_model": self._name,
-        }
-      </field>
-    </record>
-    -->
 
-    <!-- Top menu item -->
-    <!--
-    <menuitem name="car" id="car.menu_root"/>
-    -->
-    <!-- menu categories -->
-    <!--
-    <menuitem name="Menu 1" id="car.menu_1" parent="car.menu_root"/>
-    <menuitem name="Menu 2" id="car.menu_2" parent="car.menu_root"/>
-    -->
-    <!-- actions -->
-    <!--
-    <menuitem name="List" id="car.menu_1_list" parent="car.menu_1"
-              action="car.action_window"/>
-    <menuitem name="Server to list" id="car" parent="car.menu_2"
-              action="car.action_server"/>
-    -->
-  </data>
+    </data>
 </openerp>
